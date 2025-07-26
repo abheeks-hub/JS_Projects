@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    nav {
+        background-color: #1e1e1e;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        border-bottom: 2px solid #f4a261;
+        border-radius: 0 0 12px 12px;
+    }
+
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        transition: color 0.3s ease, transform 0.2s ease;
+        padding: 5px 10px;
+    }
+
+    nav a:hover {
+        color: #f4a261;
+        transform: scale(1.05);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #2c3e50;
+    }
+
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 150px;
+      background-color: rgb(48, 48, 48);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      text-decoration: none;
+      color: white;
+      transition: background-color 0.7s ease, transform 0.2s ease;
+      text-align: center;
+    }
+
+    .project-card:hover {
+      background-color: black;
+      transform: translateY(-5px);
+    }
+
+    .project-title {
+      font-size: 25px;
+      font-weight: 600;
+      color: #0f7ec9;
+      margin-bottom: 8px;
+    }
+
+    .project-desc {
+      font-size: 19px;
+      color: white;
+      max-width: 90%;
+    }
+</style>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a target="_blank" href="https://github.com/abheeks-hub">Github</a>
+    </nav>
+
+    <h1>✨ My JavaScript DOM Projects</h1>
+
+  <div class="projects-container">
+    <a href="../02_BMI_Claculator/index.HTML" class="project-card">
+      <div class="project-title">BMI Generator</div>
+      <div class="project-desc">Input height and weight to calculate and display Body Mass Index (BMI).</div>
+    </a>
+
+    <a href="../03_Digital_Clock/index.HTML" class="project-card">
+      <div class="project-title">Digital Clock</div>
+      <div class="project-desc">A real-time digital clock that updates every second using JavaScript.</div>
+    </a>
+
+    <a href="../01_Color_Generator/index.html" class="project-card">
+      <div class="project-title">Background Color Changer</div>
+      <div class="project-desc">Change the colours of the background by just clicking the buttons</div>
+    </a>
+
+    <a href="" class="project-card">
+      <div class="project-title">Guess The Number</div>
+      <div class="project-desc">Guess a randomly generated number and get feedback instantly.</div>
+    </a>
+
+    <!-- <a href="" class="project-card">
+      <div class="project-title">Increment/Decrement & Reset</div>
+      <div class="project-desc">Change a number value using buttons and learn DOM updates in real time.</div>
+    </a> -->
+  </div>
+
+</body>
+</html>

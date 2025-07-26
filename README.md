@@ -12,19 +12,23 @@ These projects are ideal for practicing how JavaScript interacts with webpage el
 
 1. **Color Changer**
    - Click buttons to change the background color of the page.
-   - Learn how to use `querySelector`, `addEventListener`, and `style` properties.
+   - Learn how to use `querySelector`, `querySelectorAll`, `addEventListener`, and `style` properties.
 
-2. **Counter App**
-   - Increment, decrement, and reset a number with buttons.
-   - Understand event handling and DOM updates in real-time.
+2. **BMI Generator**
+   - Input height and weight to calculate and display Body Mass Index (BMI).
+   - Practice with form inputs, calculations, and dynamic DOM updates.
 
-3. **Show/Hide Password**
-   - Toggle password visibility with a checkbox or button.
-   - Practice manipulating input attributes like `type`.
+3. **Digital Clock**
+   - Display real-time clock with hours, minutes, and seconds updating every second.
+   - Learn about setInterval() and dynamic text rendering in the DOM.
 
 4. **Image Slider**
    - Switch between multiple images using buttons or auto-play.
    - Use `src` manipulation and basic logic to cycle through an image array.
+
+5. **Guess The Number**
+   - Enter a number to guess a randomly generated secret number.
+   - Use conditionals and user input to give feedback and reset the game.
 
 ---
 
