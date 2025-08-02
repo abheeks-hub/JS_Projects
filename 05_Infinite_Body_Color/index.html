@@ -67,7 +67,7 @@
     let cancel = document.querySelector("#stop");
     let reset = document.querySelector("#reset");
 
-    const randomColor = function() {
+    const randomColor = function () {
       const hex = "0123456789ABCDEF";
       let color = "#";
       for (let i = 0; i < 6; i++) {
@@ -77,14 +77,17 @@
     };
 
     let interval;
-    start.addEventListener('click', function (){
-        interval = setInterval(function (){
-            body.style.backgroundColor = randomColor();
-        }, 1000)
-    })
+    start.addEventListener("click", function () {
+      if (!interval) {
+        interval = setInterval(function () {
+          body.style.backgroundColor = randomColor();
+        }, 1000);
+      }
+    });
 
     cancel.addEventListener("click", () => {
       clearInterval(interval);
+      interval = null;
       console.log("Change color stopped");
     });
 
