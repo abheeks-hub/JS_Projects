@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Color</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(45deg, #7d5a4f, #a68c6d, #5f6d3b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    button {
+      background: #1f1f1f;
+      border: 2px solid #333;
+      color: #f1f1f1;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #292929;
+      border-color: #00f6ff;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00f6ff55;
+    }
+
+    button:active {
+      transform: scale(0.98);
+      box-shadow: 0 0 4px #00f6ff88 inset;
+    }
+  </style>
+  <body>
+    <h1>Welcome to Infinite Color Expansion</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+  </body>
+  <script>
+    let body = document.querySelector("body");
+    let start = document.querySelector("#start");
+    let cancel = document.querySelector("#stop");
+    let reset = document.querySelector("#reset");
+
+    const randomColor = function () {
+      const hex = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += hex[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    };
+
+    let interval;
+    start.addEventListener('click', function (){
+        interval = setInterval(function (){
+            body.style.backgroundColor = randomColor();
+        }, 1000)
+    })
+
+    cancel.addEventListener("click", () => {
+      clearInterval(interval);
+      console.log("Change color stopped");
+    });
+
+    reset.addEventListener("click", () => {
+      body.style.backgroundColor = "#121212";
+    });
+  </script>
+</html>
