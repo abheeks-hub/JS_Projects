@@ -55,4 +55,4 @@ These projects are ideal for practicing how JavaScript interacts with webpage el
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/js
+   git clone https://github.com/abheeks-hub/JS_Projects.git
